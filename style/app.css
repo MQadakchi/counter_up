@@ -1,0 +1,89 @@
+:root {
+  --primaryColor: #dabfff;
+  --secondaryColor: rgb(79, 81, 140);
+  --textColor: rgb(144, 122, 214);
+  --lightColor: #7fdeff;
+  --darkColor: rgb(44, 42, 74);
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/fonts/vazir.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vazir;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--darkColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightColor);
+  border-radius: 25px;
+  box-shadow: 0 0 5px var(--lightColor);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      45deg,
+      rgba(44, 42, 74, 0.9),
+      rgba(144, 122, 214, 0.1)
+    ),
+    url("../images/bg.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 1024px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.items {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px dashed var(--secondaryColor);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--secondaryColor);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.items .icon {
+  font-size: 3.6em;
+  color: var(--secondaryColor);
+  border-radius: 50%;
+}
+.items .counter {
+  color: var(--secondaryColor);
+  font-size: 2.4em;
+  font-weight: 900;
+}
+.items .content {
+  color: var(--secondaryColor);
+  font-size: 1.1em;
+  font-weight: 900;
+}
